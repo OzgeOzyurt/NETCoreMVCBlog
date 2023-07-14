@@ -15,7 +15,21 @@ namespace NETCoreMVCBlog.Controllers
                 GonderiId = 1,
                 YazarId = 3,
             };
-            return View(y1);
+            Yorum y2 = new Yorum
+            {
+                Id = 2,
+                Icerik = "Ellerinize sağlık, çok faydalı olmuş.",
+                Tarih = new DateTime(2023, 07, 16),
+                GonderiId = 1,
+                YazarId = 2,
+            };
+            
+            List<Yorum> yorumListe = new List<Yorum>();
+            yorumListe.Add(y1);
+            yorumListe.Add(y2);
+
+            return View(yorumListe);
+            
             
         }
     }
